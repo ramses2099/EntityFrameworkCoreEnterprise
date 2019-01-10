@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using OnLineStore.Core.EntityLayer.Sales;
 using OnLineStore.Core.EntityLayer.Dbo;
+using OnLineStore.Core.EntityLayer.Warehouse;
 using OnLineStore.Core.DataLayer.Configurations.Sales;
-
+using OnLineStore.Core.DataLayer.Configurations.Warehouse;
 
 namespace OnLineStore.Core.DataLayer
 {
@@ -25,6 +26,8 @@ namespace OnLineStore.Core.DataLayer
 
         public DbSet<Customer> Customer { get; set; }
 
+        public DbSet<Product> Product { get; set; }
+
         public DbSet<ChangeLog> ChangeLogs { get; set; }
 
         public DbSet<ChangeLogExclusion> ChangeLogExclusions { get; set; }
@@ -33,7 +36,10 @@ namespace OnLineStore.Core.DataLayer
 
             modelBuilder.ApplyConfiguration(new OrderHeaderConfiguration())
                 .ApplyConfiguration(new OrderDetailConfiguration())
-                .ApplyConfiguration(new CustomerConfiguration());           
+                .ApplyConfiguration(new CustomerConfiguration());
+
+              
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
 
 
             base.OnModelCreating(modelBuilder);

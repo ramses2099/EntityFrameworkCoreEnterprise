@@ -128,6 +128,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\Contracts\IWarehouseService.cs" />
     <Compile Include="BusinessLayer\Contracts\ISalesService.cs" />
     <Compile Include="BusinessLayer\Contracts\IService.cs" />
     <Compile Include="BusinessLayer\Contracts\OnLineStoreException.cs" />
@@ -145,9 +146,11 @@
     <Compile Include="BusinessLayer\Responses\SingleResponse.cs" />
     <Compile Include="BusinessLayer\SalesService.cs" />
     <Compile Include="BusinessLayer\Service.cs" />
+    <Compile Include="BusinessLayer\WarehouseService.cs" />
     <Compile Include="DataLayer\Configurations\Sales\CustomerConfiguration.cs" />
     <Compile Include="DataLayer\Configurations\Sales\OrderDetailConfiguration.cs" />
     <Compile Include="DataLayer\Configurations\Sales\OrderHeaderConfiguration.cs" />
+    <Compile Include="DataLayer\Configurations\Warehouse\ProductConfiguration.cs" />
     <Compile Include="DataLayer\IQueryableExtensions.cs" />
     <Compile Include="DataLayer\OnLineStoreDbContext.cs" />
     <Compile Include="DataLayer\OnLineStoreDbContextExtensions.cs" />
@@ -158,6 +161,7 @@
     <Compile Include="EntityLayer\Sales\Customer.cs" />
     <Compile Include="EntityLayer\Sales\OrderDetail.cs" />
     <Compile Include="EntityLayer\Sales\OrderHeader.cs" />
+    <Compile Include="EntityLayer\Warehouse\Product.cs" />
     <Compile Include="IUserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo.cs" />
@@ -165,9 +169,7 @@
   <ItemGroup>
     <Folder Include="DataLayer\Configurations\Dbo\" />
     <Folder Include="DataLayer\Configurations\HumanResources\" />
-    <Folder Include="DataLayer\Configurations\Warehouse\" />
     <Folder Include="EntityLayer\HumanResources\" />
-    <Folder Include="EntityLayer\Warehouse\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
